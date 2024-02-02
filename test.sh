@@ -44,7 +44,7 @@ elif [ $data = "Lang" ]
 then
   for i in 1 {3..65}
   do
-  python main.py . ./result/ Lang $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Lang $i mlp DeepFL softmax $iter 10 $gpu;
   done
 elif [ $data = "Math" ]
 then
