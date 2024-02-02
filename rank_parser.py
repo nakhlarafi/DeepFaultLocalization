@@ -160,7 +160,7 @@ def main():
 
     #dnns=['mlp','mlp2','rnn','birnn','fc']
     #techsvector=[dnns[0],dnns[1],dnns[2],dnns[3],dnns[4]]
-    dnns=['fc']
+    dnns=['mlp']
     techsvector=[dnns[0]]
     
     
