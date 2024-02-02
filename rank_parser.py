@@ -74,7 +74,7 @@ def readDeepResult(dir,subs,tech,dnns,epoch,vers,resultBysub,techsvector,ResultD
         ver=vers[s]
         #print(sub)
         for d in range(len(dnns)):
-          if dnns[d]=='fc':   # only print birnn
+          if dnns[d]=='mlp':   # only print birnn
             tops=np.zeros(4)
             ranks=np.zeros(2)
             actual_ver=0
