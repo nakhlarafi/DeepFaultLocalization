@@ -151,6 +151,9 @@ def main():
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
+    elif(sub=='Lang'):
+        subs=['Lang']
+        vers=[65]
     else:
         print('WRONG!'+sub)
         exit()
