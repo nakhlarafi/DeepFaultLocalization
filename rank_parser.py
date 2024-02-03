@@ -169,6 +169,9 @@ def main():
     elif(sub=='Compress'):
         subs=['Compress']
         vers=[47]
+    elif(sub=='Csv'):
+        subs=['Csv']
+        vers=[16]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
