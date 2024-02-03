@@ -163,6 +163,9 @@ def main():
     elif(sub=='Codec'):
         subs=['Codec']
         vers=[18]
+    elif(sub=='Collections'):
+        subs=['Collections']
+        vers=[4]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
