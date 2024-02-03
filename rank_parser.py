@@ -172,6 +172,9 @@ def main():
     elif(sub=='Csv'):
         subs=['Csv']
         vers=[16]
+    elif(sub=='Gson'):
+        subs=['Gson']
+        vers=[18]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
