@@ -175,6 +175,9 @@ def main():
     elif(sub=='Gson'):
         subs=['Gson']
         vers=[18]
+    elif(sub=='JacksonCore'):
+        subs=['JacksonCore']
+        vers=[26]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
