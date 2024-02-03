@@ -154,9 +154,9 @@ def main():
     elif(sub=='noClosure'):
         subs=['Chart','Lang','Math','Time','Mockito']
         vers=[26, 65, 106, 27, 38] 
-    elif(sub=='Chart'):
-        subs=['Chart']   
-        vers=[26]
+    elif(sub=='all_check'):
+        subs=['Cli' 'Codec' 'Collections' 'Compress' 'Csv' 'Gson' 'JacksonCore' 'JacksonXml' 'Jsoup']   
+        vers=[16, 18, 4, 47, 16, 18, 26, 6, 93]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
