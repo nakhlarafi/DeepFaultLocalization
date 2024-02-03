@@ -160,6 +160,9 @@ def main():
     elif(sub=='Cli'):
         subs=['Cli']
         vers=[16]
+    elif(sub=='Codec'):
+        subs=['Codec']
+        vers=[18]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
