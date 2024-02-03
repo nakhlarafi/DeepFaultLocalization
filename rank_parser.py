@@ -153,7 +153,7 @@ def main():
         vers=[38]
     elif(sub=='Lang'):
         subs=['Lang']
-        vers=[65]
+        vers=[63]
     else:
         print('WRONG!'+sub)
         exit()
