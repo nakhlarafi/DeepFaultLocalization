@@ -157,6 +157,9 @@ def main():
     elif(sub=='all_check'):
         subs=['Cli' 'Codec' 'Collections' 'Compress' 'Csv' 'Gson' 'JacksonCore' 'JacksonXml' 'Jsoup']   
         vers=[16, 18, 4, 47, 16, 18, 26, 6, 93]
+    elif(sub=='Cli'):
+        subs=['Cli']
+        vers=[16]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
