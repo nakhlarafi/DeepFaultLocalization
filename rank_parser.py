@@ -166,6 +166,9 @@ def main():
     elif(sub=='Collections'):
         subs=['Collections']
         vers=[4]
+    elif(sub=='Compress'):
+        subs=['Compress']
+        vers=[47]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
