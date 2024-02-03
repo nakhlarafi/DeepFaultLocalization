@@ -32,39 +32,39 @@ elif [ $data = "all_check" ]
 then   
   for i in {1..5} {7..40}
   do
-  python main.py . ./result/ Cli $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Cli $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..18}
   do
-  python main.py . ./result/ Codec $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Codec $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {25..28}
   do
-  python main.py . ./result/ Collections $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Collections $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..47}
   do
-  python main.py . ./result/ Compress $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Compress $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..16}
   do
-  python main.py . ./result/ Csv $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Csv $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..18}
   do
-  python main.py . ./result/ Gson $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Gson $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..26}
   do
-  python main.py . ./result/ JacksonCore $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ JacksonCore $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..16}
   do
-  python main.py . ./result/ JacksonXml $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ JacksonXml $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
   for i in {1..93}
   do
-  python main.py . ./result/ Jsoup $i fc DeepFL softmax $iter 10 $gpu;
+  python main.py . ./result/ Jsoup $i fc DeepFL-Mutation softmax $iter 10 $gpu;
   done
 elif [ $data = "Chart" ]
 then
