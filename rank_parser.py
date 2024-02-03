@@ -181,6 +181,9 @@ def main():
     elif(sub=='JacksonXml'):
         subs=['JacksonXml']
         vers=[6]
+    elif(sub=='Jsoup'):
+        subs=['Jsoup']
+        vers=[93]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
