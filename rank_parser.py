@@ -178,6 +178,9 @@ def main():
     elif(sub=='JacksonCore'):
         subs=['JacksonCore']
         vers=[26]
+    elif(sub=='JacksonXml'):
+        subs=['JacksonXml']
+        vers=[6]
     elif(sub=='Mockito'):
         subs=['Mockito']
         vers=[38]
