@@ -28,37 +28,39 @@ def initializeResult(allsub,tvector):
         resultMatrix.append(modelvector)   #initialize result matrix 
     return resultMatrix
 
-def parse(rank_file, test_label_file):
-    # Check if files exist
-    if not os.path.exists(rank_file) or not os.path.exists(test_label_file):
-        print(f"File not found: {rank_file} or {test_label_file}. Skipping...")
-        return
 
-    with open(rank_file) as r:
-        rank_list = [line.rstrip('\n') for line in r]
-    with open(test_label_file) as l:
-        label_list = [line.rstrip('\n').split(',')[0] for line in l]
+    def parse(rank_file, test_label_file):
+        # Check if files exist
+        if not os.path.exists(rank_file) or not os.path.exists(test_label_file):
+            print "File not found:", rank_file, "or", test_label_file, ". Skipping..."
+            return
 
-    rank_list = np.asarray(rank_list, np.float32)
-    label_list = np.asarray(label_list, np.int)
+        with open(rank_file) as r:
+            rank_list = [line.rstrip('\n') for line in r]
+        with open(test_label_file) as l:
+            label_list = [line.rstrip('\n').split(',')[0] for line in l]
 
-    # Compute the worst rank of each element as array cost
-    u, v = np.unique(-rank_list, return_inverse=True)
-    cost = (np.cumsum(np.bincount(v)))[v]
-    ranks = []
+        rank_list = np.asarray(rank_list, dtype=np.float32)
+        label_list = np.asarray(label_list, dtype=np.int)
 
-    for i in range(len(label_list)):
-        if label_list[i] == 1:
-            ranks.append(cost[i])
+        # Compute the worst rank of each element as array cost
+        u, v = np.unique(-rank_list, return_inverse=True)
+        cost = (np.cumsum(np.bincount(v)))[v]
+        ranks = []
 
-    ranks = np.asarray(ranks, np.float32)
+        for i in range(len(label_list)):
+            if label_list[i] == 1:
+                ranks.append(cost[i])
 
-    if len(ranks) == 0:
-        return -1, -1
+        ranks = np.asarray(ranks, dtype=np.float32)
 
-    min_rank = ranks.min()
-    avg_rank = ranks.mean()
-    return min_rank, avg_rank
+        if len(ranks) == 0:
+            return -1, -1
+
+        min_rank = ranks.min()
+        avg_rank = ranks.mean()
+        return min_rank, avg_rank
+
 
 
 def readDeepResult(dir,subs,tech,dnns,epoch,vers,resultBysub,techsvector,ResultDir):
